@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Yusei+Magic&display=swap');
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Yusei Magic', sans-serif;
+*/
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+section
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding:100px;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  background: #fff;
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo
+{
+  position: relative;
+  max-width: 125px;
+}
+
+header ul
+{
+  position: relative;
+  display: flex;
+}
+
+header ul li
+{
+  list-style: none;
+}
+
+header ul li a
+{
+  display: inline-inline-block;
+  color: #333;
+  font-weight: 500;
+  margin-left: 40px;
+  text-decoration: none;
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 1.5em;
+  transition: 0.5s;
+}
+
+header ul li a:hover
+{
+  color: rgba(253, 100, 1, 1);
+}
+
+.content
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textBox
+{
+  position: relative;
+  max-width: 650px;
+}
+
+.content .textBox h2
+{
+  color: #333;
+  font-size: 4em;
+  line-height: 1.1em;
+  font-weight: 600;
+  font-family: 'Yusei Magic', sans-serif;
+  margin-bottom: 15px;
+}
+
+.content .textBox h2 span
+{
+  color: rgba(253, 100, 1, 1);
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.content .textBox p
+{
+  color: #333;
+}
+
+.content .textBox a
+{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: rgba(253, 100, 1, 1);
+  color: #fff;
+  border-radius: 45px;
+  font-size: 400;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+.content .imgBox
+{
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+
+.content .imgBox img
+{
+  max-width: 400px;
+  transition: 0.5s;
+}
+
+.thumb
+{
+  position: absolute;
+  left: 50%;
+  bottom: 65px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.025);
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.thumb li
+{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover
+{
+  transform: translateY(-10px);
+}
+
+.thumb li img
+{
+  max-width: 65px;
+}
+
+.social
+{
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social li
+{
+  list-style: none;
+}
+
+.social li a
+{
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+  margin: 10px 0;
+  transform: scale(0.7);
+  transition: 0.5s;
+}
+
+.social li a:hover
+{
+  transform: scale(1);
+  color: #fff;
+}
+
+.circle
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d3d2cd;
+  clip-path: circle(600px at right 800px);
+  transition: 0.5s;
+}
+
+.circle2
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(253, 100, 1, .65);
+  clip-path: circle(500px at left -300px);
+  transition: 0.5s;
+}
+
+.social2
+{
+  display: none;
+}
+
+/* Responsive */
+@media(max-width: 800px)
+{
+  .circle
+  {
+    clip-path: circle(285px at center bottom 700px);
+  }
+}
+
+@media(max-width: 600px)
+{
+  .circle
+  {
+    clip-path: circle(275px at center bottom);
+  }
+}
+
+@media(max-width: 991px)
+{
+  header
+  {
+    padding: 20px;
+  }
+
+  header .logo
+  {
+    position: relative;
+    max-width: 60px;
+  }
+
+  header ul
+  {
+    display: none;
+  }
+
+  .toggle
+  {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url('../img/menu.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .toggle.active
+  {
+    position: fixed;
+    right: 20px;
+    background: url('../img/close.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 11;
+  }
+
+  .toggle i
+  {
+    font-size: 30px;
+  }
+
+  header ul.navigation.active
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 100, 1, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  header ul.navigation.active li
+  {
+    margin: 10px 0;
+  }
+
+  header ul.navigation.active li:last-child
+  {
+    margin: 0;
+  }
+
+  header ul.navigation.active li a
+  {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 1.6em;
+    margin: 0;
+  }
+
+  header ul.navigation.active li:hover a
+  {
+    color: #000;
+  }
+
+  section
+  {
+    padding: 20px 20px 120px;
+  }
+
+  .content
+  {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+  .content .textBox h2
+  {
+    font-size: 2.5em;
+  }
+
+  .content .textBox
+  {
+    max-width: 100%;
+  }
+
+  .content .imgBox
+  {
+    max-width: 100%;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .content .imgBox img
+  {
+    max-width: 250px;
+  }
+
+  .thumb li img
+  {
+    max-width: 40px;
+  }
+
+  .circle2
+  {
+    display: none;
+  }
+
+  .social
+  {
+    display: none;
+  }
+
+  ul.social2
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 45px;
+    padding-right: 45px;
+    border-top: 1px solid rgba(253, 100, 1, .65);
+    margin-top: 15px;
+  }
+
+  ul.social2 li
+  {
+    list-style: none;
+    text-decoration: none;
+    font-size: .75em;
+    padding: 0 25px;
+  }
+
+  ul.social2 li i
+  {
+    color: #fff;
+  }
+}
