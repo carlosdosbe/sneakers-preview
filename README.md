@@ -7,3 +7,5 @@ In my opinion it is the type of experience that you should have when buying or w
 
 By, Carlos Daniel OB.
 @carlosdosbe
+
+https://carlosdosbe.github.io/sneakers-preview/
